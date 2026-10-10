@@ -1,0 +1,159 @@
+/* Viral TikTok button */
+.btn-viral {
+  background: linear-gradient(135deg, #000, #25F4EE, #FE2C55, #000);
+  background-size: 300% 300%;
+  animation: gradientBG 4s ease infinite;
+  box-shadow: 0 5px 15px rgba(254,44,85,.5);
+  font-size: 1.15rem;
+}
+
+/* Viral page */
+#viralPage {
+  display: none;
+  position: relative; z-index: 1;
+  max-width: 600px; width: 100%;
+  margin: 0 auto;
+  animation: floatIn .5s ease;
+}
+#viralPage.active { display: block; }
+
+.viral-header {
+  background: linear-gradient(135deg, #000, #25F4EE, #FE2C55);
+  background-size: 300% 300%;
+  animation: gradientBG 5s ease infinite;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px rgba(254,44,85,.4);
+}
+.viral-header h2 { color: #fff; font-size: 1.7rem; margin-bottom: .4rem; text-shadow: 0 2px 8px rgba(0,0,0,.5); }
+.viral-header p { color: #fff; font-size: .95rem; margin-bottom: 1rem; }
+
+.viral-card {
+  background: rgba(15,23,42,.92);
+  backdrop-filter: blur(12px);
+  border: 2px solid #FE2C55;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 10px 30px rgba(254,44,85,.3);
+}
+
+.viral-step {
+  display: flex; align-items: center; gap: 12px;
+  background: #0f172a;
+  padding: .9rem 1rem;
+  border-radius: 12px;
+  margin-bottom: .7rem;
+  border-left: 4px solid #fbbf24;
+  color: #e2e8f0;
+  font-size: .95rem;
+}
+.viral-step .num {
+  background: linear-gradient(135deg, #fbbf24, #ef4444);
+  color: #0f172a;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold; flex-shrink: 0;
+}
+
+.viral-input {
+  width: 100%; padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #334155;
+  background: #0f172a;
+  color: #fff;
+  font-size: .95rem;
+  margin-bottom: 1rem;
+}
+.viral-input:focus { outline: none; border-color: #FE2C55; }
+.viral-input::placeholder { color: #64748b; }
+
+.viral-actions {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 1rem 0;
+}
+.viral-action {
+  padding: .9rem .5rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
+  gap: 6px;
+  font-size: .9rem;
+  transition: transform .2s;
+}
+.viral-action:active { transform: scale(.95); }
+.viral-like { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.viral-follow { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.viral-share { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.viral-report { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.viral-open { background: linear-gradient(135deg, #000, #25F4EE); }
+
+.viral-counter {
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #0f172a;
+  padding: .6rem 1rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: .95rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(250,204,21,.4);
+}
+
+.viral-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.viral-item {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: .9rem 1rem;
+  margin-bottom: .7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.viral-item .info { flex: 1; overflow: hidden; }
+.viral-item .name { color: #fbbf24; font-weight: bold; font-size: .9rem; }
+.viral-item .email { color: #64748b; font-size: .75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viral-item .open-btn {
+  background: linear-gradient(135deg, #FE2C55, #25F4EE);
+  color: #fff; padding: .5rem .9rem;
+  border: none; border-radius: 8px;
+  font-weight: bold; cursor: pointer;
+  font-size: .8rem; flex-shrink: 0;
+}
+
+.viral-marquee {
+  background: linear-gradient(90deg, #FE2C55, #25F4EE, #FE2C55);
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+  padding: .6rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: .85rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.empty-viral {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem 1rem;
+  font-size: .9rem;
+}
